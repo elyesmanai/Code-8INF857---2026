@@ -1,0 +1,21 @@
+title: Force brute SSH
+description: Une IP fait 5 échecs SSH en moins de 2 minutes (règle R1).
+actions:
+  - ref: bilan
+    action: journaux.connexions
+    args:
+      ip: ${{ TRIGGER.ip }}
+
+  - ref: bloquer
+    action: pare_feu.bloquer_ip
+    depends_on: [bilan]
+    run_if: ${{ ACTIONS.bilan.result.succes == 0 }}
+    args:
+      ip: ${{ TRIGGER.ip }}
+
+returns:
+  verdict: ${{ 'attaque sans impact' if ACTIONS.bilan.result.succes == 0 else 'incident' }}
+  rapport: >-
+    ${{ TRIGGER.ip }} : ${{ ACTIONS.bilan.result.echecs }} échecs de ${{ ACTIONS.bilan.result.premier }}
+    à ${{ ACTIONS.bilan.result.dernier }}, ${{ ACTIONS.bilan.result.succes }} connexion(s) réussie(s).
+    Blocage : ${{ ACTIONS.bloquer.statut }}.

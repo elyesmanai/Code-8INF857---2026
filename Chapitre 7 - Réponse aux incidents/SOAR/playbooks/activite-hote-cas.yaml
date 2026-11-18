@@ -1,0 +1,47 @@
+title: Activité anormale sur le serveur (avec cas)
+description: Connexion sortante suspecte (règle R4) ou CPU saturé (règle R5).
+actions:
+  - ref: cas
+    action: cas.rattacher
+    args:
+      alerte: ${{ TRIGGER }}
+
+  - ref: processus
+    action: hote.processus
+
+  - ref: arreter
+    action: hote.tuer_processus
+    depends_on: [processus]
+    run_if: ${{ ACTIONS.processus.result.processus[0].cpu > 90 }}
+    args:
+      pid: ${{ ACTIONS.processus.result.processus[0].pid }}
+
+  - ref: historique
+    action: hote.lire
+    depends_on: [processus]
+    args:
+      chemin: home/${{ ACTIONS.processus.result.processus[0].utilisateur }}/.bash_history
+
+  - ref: crontab
+    action: hote.lire
+    depends_on: [processus]
+    args:
+      chemin: var/spool/cron/${{ ACTIONS.processus.result.processus[0].utilisateur }}
+
+  - ref: desactiver
+    action: comptes.desactiver
+    depends_on: [arreter]
+    args:
+      compte: ${{ ACTIONS.processus.result.processus[0].utilisateur }}
+    approbation: true
+
+returns:
+  cas: ${{ ACTIONS.cas.result.cas }}
+  verdict: ${{ 'incident' if ACTIONS.arreter.statut == 'réussie' || not ACTIONS.cas.result.nouveau else 'faux positif' }}
+  rapport: >-
+    Processus le plus gourmand : ${{ ACTIONS.processus.result.processus[0].commande }}
+    (${{ ACTIONS.processus.result.processus[0].cpu }} % CPU, compte ${{ ACTIONS.processus.result.processus[0].utilisateur }}),
+    arrêt : ${{ ACTIONS.arreter.statut }}.
+    Commandes du compte : ${{ FN.join(ACTIONS.historique.result.lignes, ' ; ') }}.
+    Crontab du compte : ${{ FN.join(ACTIONS.crontab.result.lignes, ' ; ') }}.
+    Désactivation du compte : ${{ ACTIONS.desactiver.statut }}.

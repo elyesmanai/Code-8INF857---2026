@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+environnement/
+resultats/
+.ipynb_checkpoints/
+.claude/

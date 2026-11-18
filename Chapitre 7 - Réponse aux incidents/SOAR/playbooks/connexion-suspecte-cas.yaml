@@ -1,0 +1,43 @@
+title: Connexion suspecte (avec cas)
+description: Une connexion réussie après des échecs (règle R2), ou un essai sur un compte leurre (règle R3).
+actions:
+  - ref: cas
+    action: cas.rattacher
+    args:
+      alerte: ${{ TRIGGER }}
+
+  - ref: bilan
+    action: journaux.connexions
+    args:
+      ip: ${{ TRIGGER.ip }}
+
+  - ref: enrichir
+    action: ip.enrichir
+    args:
+      ip: ${{ TRIGGER.ip }}
+    retry_policy: {max_attempts: 3, timeout: 15}
+
+  - ref: bloquer
+    action: pare_feu.bloquer_ip
+    depends_on: [bilan, enrichir]
+    run_if: ${{ not ACTIONS.enrichir.result.interne }}
+    args:
+      ip: ${{ TRIGGER.ip }}
+
+  - ref: desactiver
+    action: comptes.desactiver
+    depends_on: [bilan, enrichir]
+    run_if: ${{ not ACTIONS.enrichir.result.interne && FN.length(ACTIONS.bilan.result.comptes_entres) > 0 }}
+    args:
+      compte: ${{ ACTIONS.bilan.result.comptes_entres[0] }}
+    approbation: true
+
+returns:
+  cas: ${{ ACTIONS.cas.result.cas }}
+  verdict: >-
+    ${{ 'faux positif' if ACTIONS.enrichir.result.interne && ACTIONS.bilan.result.echecs <= 3 else 'incident' }}
+  rapport: >-
+    ${{ TRIGGER.ip }} (interne : ${{ ACTIONS.enrichir.result.interne }}) a fait ${{ ACTIONS.bilan.result.echecs }} échec(s)
+    sur ${{ FN.join(ACTIONS.bilan.result.comptes_essayes) }}, premier essai à ${{ ACTIONS.bilan.result.premier }}.
+    Comptes où elle est entrée : ${{ FN.join(ACTIONS.bilan.result.comptes_entres) }}.
+    Blocage : ${{ ACTIONS.bloquer.statut }}. Désactivation : ${{ ACTIONS.desactiver.statut }}.
