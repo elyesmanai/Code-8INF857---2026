@@ -1,0 +1,9 @@
+id,actif,scenario,probabilite,impact
+R1,bd01,Rançongiciel chiffre la base clients ; sauvegardes en échec,4,5
+R2,Microsoft 365,Prise de contrôle d'un compte administrateur sans MFA,4,5
+R3,Comptes,Ancien employé encore actif accède aux données,3,4
+R4,NAS non inventorié (10.0.1.47),Fuite de CV de candidats stockés sur un NAS oublié,3,4
+R5,"web01, web02","Panne prolongée de l'hébergement (incendie, panne électrique)",2,5
+R6,Employés,Hameçonnage menant au vol d'identifiants,4,3
+R7,ftp01,Exploitation d'une faille du serveur FTP Debian 10 (fin de support),2,3
+R8,Bureau,Vol d'un portable chiffré,2,2

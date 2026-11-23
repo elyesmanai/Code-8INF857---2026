@@ -1,0 +1,8 @@
+ticket,detecte_le,resume,renseignements_personnels,nature,personnes_quebec,personnes_france,sensibilite,donnees_chiffrees,utilisation_malveillante
+INC-2026-011,2026-02-03T09:40,"Courriel d'hameçonnage signalé par 6 employés ; aucun clic, aucun identifiant saisi",non,aucune,0,0,,,
+INC-2026-019,2026-03-17T14:05,"Facture d'un client envoyée par erreur à un autre client, qui l'a supprimée et l'a confirmé par écrit",oui,communication,1,0,faible,non,improbable
+INC-2026-027,2026-04-22T08:15,"Portable d'une représentante volé dans sa voiture ; disque chiffré BitLocker, clé non compromise",oui,perte,120,0,moyenne,oui,improbable
+INC-2026-034,2026-06-30T11:20,"Attaque DDoS sur web01 et web02, 3 h d'interruption",non,aucune,0,0,,,
+INC-2026-041,2026-09-14T08:02,"Connexion à bd01 avec le compte d'un administrateur parti le 29 août ; export de la table clients (noms, courriels, adresses, téléphones, mots de passe hachés)",oui,accès,1240,310,élevée,non,probable
+INC-2026-046,2026-10-08T16:45,Rançongiciel sur un poste non inventorié (DESKTOP-7KQ2M1) ; aucune donnée personnelle sur le poste,non,aucune,0,0,,,
+INC-2026-052,2026-11-23T10:30,"Le scan réseau révèle un NAS (10.0.1.47) accessible à tous, contenant 45 CV de candidats avec NAS (numéro d'assurance sociale) et date de naissance ; journaux d'accès absents",oui,accès,45,0,élevée,non,possible

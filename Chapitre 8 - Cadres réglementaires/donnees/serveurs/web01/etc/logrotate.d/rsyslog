@@ -1,0 +1,15 @@
+/var/log/syslog
+/var/log/auth.log
+/var/log/kern.log
+{
+	daily
+	rotate 90
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+}

@@ -1,0 +1,12 @@
+risque,mesure,traitement,cout,probabilite_apres,impact_apres
+R1,Réparer les sauvegardes de bd01 + copie hors site immuable + test trimestriel,réduire,9000,2,3
+R1,Assurance cyber (franchise 25 000 $),transférer,14000,4,3
+R2,MFA obligatoire + accès conditionnel (licences Entra ID P1),réduire,6000,1,5
+R3,Processus de départ relié aux RH + revue des accès trimestrielle,réduire,4000,1,4
+R4,Retirer le NAS et supprimer les CV de plus de 2 ans,éviter,1500,0,0
+R4,Chiffrer le NAS et l'inscrire à l'inventaire,réduire,3000,2,4
+R5,Second site de reprise (Montréal) avec bascule testée,réduire,38000,2,2
+R5,Contrat de reprise chez un hébergeur partenaire (délai 48 h),transférer,12000,2,3
+R6,Formation et simulations d'hameçonnage trimestrielles,réduire,5000,2,3
+R7,Décommissionner ftp01 (remplacé par SFTP sur web01),éviter,2000,0,0
+R8,Aucune mesure supplémentaire (disques déjà chiffrés),accepter,0,2,2

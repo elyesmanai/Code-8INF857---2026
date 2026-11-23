@@ -1,0 +1,11 @@
+ip,hote,type,os,proprietaire,donnees_personnelles,criticite
+10.0.1.10,web01,serveur,Ubuntu 22.04,Marc Gagnon (TI),oui,haute
+10.0.1.11,web02,serveur,Ubuntu 22.04,Marc Gagnon (TI),oui,haute
+10.0.1.20,bd01,serveur,Ubuntu 20.04,Marc Gagnon (TI),oui,haute
+10.0.1.30,ftp01,serveur,Debian 10,Marc Gagnon (TI),oui,moyenne
+10.0.1.40,sauvegarde01,serveur,Ubuntu 22.04,Marc Gagnon (TI),oui,haute
+10.0.2.5,pare-feu,réseau,pfSense 2.7,Marc Gagnon (TI),non,haute
+10.0.3.21,poste-rh01,poste,Windows 11,Julie Tremblay (RH),oui,moyenne
+10.0.3.22,poste-compta01,poste,Windows 11,Luc Côté (Finances),oui,moyenne
+10.0.3.30,poste-dev01,poste,Ubuntu 24.04,Sami Haddad (Dév.),non,basse
+10.0.3.31,poste-dev02,poste,Ubuntu 24.04,Sami Haddad (Dév.),non,basse

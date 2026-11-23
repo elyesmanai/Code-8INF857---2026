@@ -1,0 +1,42 @@
+utilisateur,nom_affiche,compte_actif,mfa,roles_admin,derniere_connexion
+mgagnon@nordheb.ca,Marc Gagnon,oui,oui,Global Administrator,2026-11-26
+jtremblay@nordheb.ca,Julie Tremblay,oui,oui,,2026-11-26
+lcote@nordheb.ca,Luc Côté,oui,oui,Exchange Administrator,2026-11-21
+shaddad@nordheb.ca,Sami Haddad,oui,oui,,2026-11-26
+nbergeron@nordheb.ca,Nadia Bergeron,oui,non,Global Administrator,2026-11-20
+pbouchard@nordheb.ca,Pierre Bouchard,oui,oui,,2026-09-14
+aroy@nordheb.ca,Amélie Roy,oui,non,,2026-11-24
+klavoie@nordheb.ca,Kevin Lavoie,non,oui,,2026-06-12
+sgirard@nordheb.ca,Sophie Girard,oui,non,,2026-10-01
+esimard@nordheb.ca,Émilie Simard,oui,oui,,2026-11-22
+ofortin@nordheb.ca,Olivier Fortin,oui,oui,,2026-11-20
+cpelletier@nordheb.ca,Camille Pelletier,oui,oui,,2026-11-26
+gmorin@nordheb.ca,Gabriel Morin,oui,oui,,2026-11-25
+llapointe@nordheb.ca,Léa Lapointe,oui,oui,,2026-11-22
+tgauthier@nordheb.ca,Thomas Gauthier,oui,oui,,2026-11-22
+couellet@nordheb.ca,Chloé Ouellet,oui,oui,,2026-11-21
+wbelanger@nordheb.ca,William Bélanger,oui,oui,,2026-11-24
+rdufour@nordheb.ca,Rosalie Dufour,oui,oui,,2026-11-21
+flevesque@nordheb.ca,Félix Lévesque,oui,oui,,2026-11-22
+mcaron@nordheb.ca,Maëlle Caron,oui,oui,,2026-11-21
+spoirier@nordheb.ca,Samuel Poirier,oui,oui,,2026-11-26
+asavard@nordheb.ca,Alice Savard,oui,oui,,2026-11-25
+nboivin@nordheb.ca,Nathan Boivin,oui,oui,,2026-11-20
+fharvey@nordheb.ca,Florence Harvey,oui,oui,,2026-11-23
+jvilleneuve@nordheb.ca,Jérémy Villeneuve,oui,oui,,2026-11-23
+lbergeron@nordheb.ca,Laurence Bergeron,oui,oui,,2026-11-26
+alarouche@nordheb.ca,Antoine Larouche,oui,oui,,2026-11-24
+jgagne@nordheb.ca,Juliette Gagné,oui,oui,,2026-11-25
+vtremblay@nordheb.ca,Vincent Tremblay,oui,oui,,2026-11-21
+mdesbiens@nordheb.ca,Mégane Desbiens,oui,oui,,2026-11-22
+xgirard@nordheb.ca,Xavier Girard,oui,oui,,2026-11-25
+nmaltais@nordheb.ca,Noémie Maltais,oui,oui,,2026-11-22
+hbrassard@nordheb.ca,Hugo Brassard,oui,oui,,2026-11-21
+chudon@nordheb.ca,Catherine Hudon,oui,oui,,2026-11-21
+aneron@nordheb.ca,Alexis Néron,oui,oui,,2026-11-26
+mcote@nordheb.ca,Marianne Côté,oui,oui,,2026-11-20
+rbelley@nordheb.ca,Raphaël Belley,oui,oui,,2026-11-20
+ibouchard@nordheb.ca,Isabelle Bouchard,oui,oui,,2026-11-26
+hlarouche@nordheb.ca,Hugo Larouche,oui,oui,,2026-08-20
+svc-sauvegarde@nordheb.ca,Service sauvegarde,oui,non,,2026-11-26
+accueil@nordheb.ca,Accueil (partagé),oui,non,,2026-11-25

@@ -1,0 +1,24 @@
+# Nmap 7.94 scan initiated Mon Nov 23 09:12:41 2026 as: nmap -sS -sV -oG scan_2026-11-23.gnmap 10.0.0.0/16
+Host: 10.0.1.10 (web01.nordheb.local)	Status: Up
+Host: 10.0.1.10 (web01.nordheb.local)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (997)
+Host: 10.0.1.11 (web02.nordheb.local)	Status: Up
+Host: 10.0.1.11 (web02.nordheb.local)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (997)
+Host: 10.0.1.20 (bd01.nordheb.local)	Status: Up
+Host: 10.0.1.20 (bd01.nordheb.local)	Ports: 22/open/tcp//ssh///, 5432/open/tcp//postgresql///	Ignored State: closed (997)
+Host: 10.0.1.40 (sauvegarde01.nordheb.local)	Status: Up
+Host: 10.0.1.40 (sauvegarde01.nordheb.local)	Ports: 22/open/tcp//ssh///	Ignored State: closed (997)
+Host: 10.0.1.47 ()	Status: Up
+Host: 10.0.1.47 ()	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 5000/open/tcp//upnp///	Ignored State: closed (997)
+Host: 10.0.2.5 (pare-feu.nordheb.local)	Status: Up
+Host: 10.0.2.5 (pare-feu.nordheb.local)	Ports: 443/open/tcp//https///	Ignored State: closed (997)
+Host: 10.0.3.21 (poste-rh01.nordheb.local)	Status: Up
+Host: 10.0.3.21 (poste-rh01.nordheb.local)	Ports: 135/open/tcp//msrpc///, 445/open/tcp//microsoft-ds///	Ignored State: closed (997)
+Host: 10.0.3.22 (poste-compta01.nordheb.local)	Status: Up
+Host: 10.0.3.22 (poste-compta01.nordheb.local)	Ports: 135/open/tcp//msrpc///, 445/open/tcp//microsoft-ds///	Ignored State: closed (997)
+Host: 10.0.3.30 (poste-dev01.nordheb.local)	Status: Up
+Host: 10.0.3.30 (poste-dev01.nordheb.local)	Ports: 22/open/tcp//ssh///	Ignored State: closed (997)
+Host: 10.0.3.31 (poste-dev02.nordheb.local)	Status: Up
+Host: 10.0.3.31 (poste-dev02.nordheb.local)	Ports: 22/open/tcp//ssh///	Ignored State: closed (997)
+Host: 10.0.3.58 (DESKTOP-7KQ2M1)	Status: Up
+Host: 10.0.3.58 (DESKTOP-7KQ2M1)	Ports: 135/open/tcp//msrpc///, 3389/open/tcp//ms-wbt-server///	Ignored State: closed (997)
+# Nmap done at Mon Nov 23 09:31:07 2026 -- 65536 IP addresses (11 hosts up) scanned in 1106.12 seconds
